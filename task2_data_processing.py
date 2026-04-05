@@ -20,6 +20,7 @@ def main():
     # Remove duplicates by post_id
     df.drop_duplicates(subset="post_id", inplace=True)
     print(f"After removing duplicates: {len(df)}")
+    
     # Drop rows where post_id, title, or score is missing
     df.dropna(subset=["post_id", "title", "score"], inplace=True)
     print(f"After removing nulls: {len(df)}")
