@@ -9,7 +9,6 @@ post_id,title,category,score,num_comments,author,collected_at
 47637757,Embarrassingly simple self-distillation improves code generation,technology,583,171,Anon84,2026-04-05 12:07:01
 47606244,Training mRNA Language Models Across 25 Species for $165,technology,135,32,maziyar,2026-04-05 12:07:05
 47633396,Tell HN: Anthropic no longer allowing Claude Code subscriptions to use OpenClaw,technology,1046,790,firloop,2026-04-05 12:07:10
-47638270,Mbodi AI (YC P25) Is Hiring,technology,1,0,chitianhao,2026-04-05 12:07:16
 47645235,Brain scans reveal how to enters a psychedelic-like trance without drugs,technology,34,5,ingenika,2026-04-05 12:07:20
 47633855,Claude Code Found a Linux Vulnerability Hidden for 23 Years,technology,386,243,eichin,2026-04-05 12:07:33
 47645976,AI that copied musical artist files copyright claim against artist [updated],technology,50,12,josephcsible,2026-04-05 12:07:34
@@ -67,11 +66,9 @@ post_id,title,category,score,num_comments,author,collected_at
 47631030,Show HN: Ismcpdead.com – Live dashboard tracking MCP adoption and sentiment,entertainment,35,23,sagirodin,2026-04-05 12:55:52
 47606560,"Show HN: Dull – Instagram Without Reels, YouTube Without Shorts (iOS)",entertainment,152,117,kasparnoor,2026-04-05 12:56:09
 47621438,Show HN: Made a little Artemis II tracker,entertainment,149,55,codingmoh,2026-04-05 12:56:10
-47638498,Show HN: AdaShape-3D modeler for intuitive 3D printing parts / Windows 11,entertainment,4,2,fsloth,2026-04-05 12:56:21
 47631648,Automatic Textbook Formalization,entertainment,43,17,tzury,2026-04-05 12:56:46
 47612601,"Sweden goes back to basics, swapping screens for books in the classroom",entertainment,897,432,novaRom,2026-04-05 12:56:53
 47589856,Show HN: Postgres extension for BM25 relevance-ranked full-text search,entertainment,202,56,tjgreen,2026-04-05 12:57:19
-47636820,Show HN: Web Push Notifications for Hacker News,entertainment,4,1,kinlan,2026-04-05 12:57:31
 47612321,Show HN: I built a DNS resolver from scratch in Rust – no DNS libraries,entertainment,113,65,rdme,2026-04-05 12:57:36
 47615844,Show HN: A P2P messenger with dual network modes (Fast and Tor),entertainment,39,22,Realman78,2026-04-05 12:57:39
 47632750,Show HN: TinyOS – A minimalist RTOS for Cortex-M written in C,entertainment,100,43,hpscript,2026-04-05 12:57:40

@@ -1,32 +1,45 @@
 import json
 import pandas as pd
-import os
+#import os
+from pathlib import Path
 
 def main():
     # Load JSON file
-    files = [f for f in os.listdir("data") 
-             if f.startswith("trends_") and f.endswith(".json")]
-    print (files)
+  
+    data_folder = Path("F:/Learning/miniproject/data")
+    file_path = data_folder / "trends_20260405.json"
+  
+    with open(file_path, "r") as f: 
 
-    if not files:
-        print("No JSON file found.")
-        return
-    latest_file = sorted(files)[-1]
-    print(latest_file)
-
-    with open(os.path.join("data", latest_file), "r") as f:
         stories = json.load(f)
 
     # Convert to DataFrame
     df = pd.DataFrame(stories)
 
-    # Clean data
-    df.fillna({"score": 0, "num_comments": 0, "author": "unknown"}, inplace=True)
+  # Step 3: Cleaning process
+    # Remove duplicates by post_id
+    df.drop_duplicates(subset="post_id", inplace=True)
 
-    # Save to CSV
+    # Drop rows where post_id, title, or score is missing
+    df.dropna(subset=["post_id", "title", "score"], inplace=True)
+
+    # Ensure score and num_comments are integers
+    df["score"] = df["score"].astype(int)
+    df["num_comments"] = df["num_comments"].astype(int)
+
+    # Remove low-quality stories (score < 5)
+    df = df[df["score"] >= 5]
+
+    # Strip whitespace from titles
+    df["title"] = df["title"].str.strip()
+
+    # Step 4: Save cleaned data
     output_file = "data/trends_clean.csv"
     df.to_csv(output_file, index=False)
-    print(f"Saved cleaned data to {output_file}")
+
+    # Step 5: Print summary
+    print(f"Cleaned dataset saved to {output_file}")
+    print(f"Remaining rows after cleaning: {len(df)}")
 
 if __name__ == "__main__":
     main()
